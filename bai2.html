@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<input type="number" id="age">
+<button onclick="kiemtratuoi()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemtratuoi(){
+    let age = parseInt(document.getElementById("age").value);
+    if (age ==15) {
+        document.getElementById("ketqua").innerText = 'Học sinh đủ điều kiện vào lớp 10'
+    } else {
+        document.getElementById("ketqua").innerText = 'Học sinh không đủ điều kiện vào lớp 10'
+    }
+    }
+</script>
+</body>
+</html>

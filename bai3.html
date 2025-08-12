@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<input type="number" id="num">
+<button onclick="kiemtraso()">Kết quả</button>
+<p id="ketqua"></p>
+<script>
+    function kiemtraso() {
+        let a = parseInt(document.getElementById("num").value);
+        if (a == 0){
+            document.getElementById("ketqua").innerText = ` ${a} = 0`;
+        } else {
+            if (a > 0){
+                document.getElementById("ketqua").innerText = ` ${a} > 0`;
+            } else {
+                document.getElementById("ketqua").innerText = ` ${a} < 0`;
+            }
+        }
+    }
+</script>
+</body>
+</html>

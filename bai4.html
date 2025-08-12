@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<label for="numa">Nhập số thứ nhất: </label>
+<input type="number" id="numa">
+<label for="numb">Nhập số thứ hai: </label>
+<input type="number" id="numb">
+<label for="numc">Nhập số thứ ba: </label>
+<input type="number" id="numc">
+<button onclick="timsolonnhat()">Tìm số lớn nhất</button>
+<p id="ketqua"></p>
+<script>
+    function timsolonnhat(){
+        let a = parseInt(document.getElementById("numa").value);
+        let b = parseInt(document.getElementById("numb").value);
+        let c = parseInt(document.getElementById("numc").value);
+        if (a>b && a>c){
+            document.getElementById("ketqua").innerText = `${a} là số lớn nhất`
+        } else {
+            if ( b>c ){
+                document.getElementById("ketqua").innerText = `${b} là số lớn nhất`
+            } else {
+                document.getElementById("ketqua").innerText = `${c} là số lớn nhất`
+            }
+        }
+    }
+</script>
+</body>
+</html>

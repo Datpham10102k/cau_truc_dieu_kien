@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<label for="sophutgoi">Số phút gọi</label>
+<input type="number" id="sophutgoi">
+<button onclick="cuocdienthoai()">Tính cước</button>
+<p id="tiencuoc"></p>
+<script>
+    function cuocdienthoai(){
+        let a = parseInt(document.getElementById('sophutgoi').value);
+        if (a >= 700){
+            document.getElementById('tiencuoc').innerText = `Tiền cước điện thoại cần trả là ${a*40} `;
+        }else {
+            if (a<700 && a>=500){
+                document.getElementById('tiencuoc').innerText = `Tiền cước điện thoại cần trả là ${a*80} `;
+            }else {
+                document.getElementById('tiencuoc').innerText = `Tiền cước điện thoại cần trả là ${a*120} `;
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

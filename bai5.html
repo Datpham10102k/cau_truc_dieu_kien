@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<label for="kiemtra">Điểm bài kiểm tra: </label>
+<input type="number" id="kiemtra">
+<label for="giuaky">Điểm thi giữa kỳ </label>
+<input type="number" id="giuaky">
+<label for="cuoiky">Điểm thi cuối kì: </label>
+<input type="number" id="cuoiky">
+<button onclick="xeploaihocluc()">Xếp loại</button>
+<p id="xeploai"></p>
+<script>
+    function xeploaihocluc(){
+        let a = parseInt(document.getElementById("kiemtra").value);
+        let b = parseInt(document.getElementById("giuaky").value);
+        let c = parseInt(document.getElementById("cuoiky").value);
+        let diemtong = (a+b+c)/3
+        if (diemtong >= 9 ){
+            document.getElementById("xeploai").innerText = 'Học lực giỏi'
+        } else {
+            if (diemtong >=7 && diemtong <= 8){
+                document.getElementById("xeploai").innerText = " Học lực tiên tiến"
+            } else {
+                if (diemtong >=5 && diemtong <= 6){
+                    document.getElementById("xeploai").innerText = "Học lực trung bình"
+                } else {
+                    document.getElementById("xeploai").innerText = "Học lực yếu"
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
